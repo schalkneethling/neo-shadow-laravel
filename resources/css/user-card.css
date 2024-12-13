@@ -1,0 +1,102 @@
+.card-list {
+    display: flex;
+    gap: var(--spacing-24);
+}
+
+.card-list,
+.user-card-social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-card {
+    background-color: var(--color-background-primary);
+    display: grid;
+    gap: var(--spacing-8);
+    inline-size: max-content;
+    padding: var(--spacing-32);
+    place-items: center;
+    position: relative;
+}
+
+.user-card::before {
+    block-size: 2rem;
+    border: var(--border-thick) solid var(--color-primary);
+    border-block-end-color: transparent;
+    border-inline-end-color: transparent;
+    content: "";
+    display: block;
+    inline-size: 2rem;
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.user-card-title {
+    font-size: var(--typography-font-size-heading);
+    margin: 0;
+}
+
+.user-card-role {
+    font-size: var(--typography-font-size-subheading);
+}
+
+.user-card-email {
+    font-size: var(--typography-font-size-medium);
+    font-weight: 300;
+}
+
+.user-card-phone a {
+    text-decoration-thickness: 0.125rem;
+}
+
+.user-card-social {
+    display: flex;
+    gap: var(--spacing-24);
+    margin-block-start: var(--spacing-48);
+}
+
+.icon {
+    display: block;
+}
+
+.icon::before {
+    background-color: var(--color-primary);
+    block-size: var(--size-icon);
+    content: "";
+    display: block;
+    inline-size: var(--size-icon);
+}
+
+.icon:focus-visible::before {
+    block-size: var(--size-icon-focused);
+    inline-size: var(--size-icon-focused);
+    margin-block-start: -0.5rem;
+}
+
+.icon.icon-social-bluesky {
+    mask-image: url("/assets/social/bsky.svg");
+    mask-size: cover;
+}
+
+.icon.icon-social-linkedin {
+    mask-image: url("/assets/social/linkedin.svg");
+    mask-size: cover;
+}
+
+.icon.icon-social-mastodon {
+    mask-image: url("/assets/social/mastodon.svg");
+    mask-size: cover;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

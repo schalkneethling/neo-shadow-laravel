@@ -1,0 +1,59 @@
+:root {
+    --border-thick: 1rem;
+
+    --color-default: #271165;
+    --color-primary: #7c4efe;
+    --color-background-primary: #f7f5ff;
+
+    --size-icon: 2rem;
+    --size-icon-focused: 2.5rem;
+
+    --spacing-2: 0.125rem;
+    --spacing-4: 0.25rem;
+    --spacing-8: 0.5rem;
+    --spacing-12: 0.75rem;
+    --spacing-16: 1rem;
+    --spacing-24: 1.5rem;
+    --spacing-32: 2rem;
+    --spacing-48: 3rem;
+    --spacing-64: 4rem;
+
+    --typography-font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri,
+        "DejaVu Sans", source-sans-pro, sans-serif;
+
+    --typography-line-height-content: 1.75;
+
+    --typography-font-size-heading: 2.25rem;
+    --typography-font-size-subheading: 1.75rem;
+    --typography-font-size-medium: 1.375rem;
+    --typography-font-size-default: 1rem;
+}
+
+body {
+    color: var(--color-default);
+    font: 100% / var(--typography-line-height-content)
+        var(--typography-font-family);
+}
+
+a:link,
+a:link:visited {
+    color: var(--color-default);
+    text-underline-offset: 0.25rem;
+    transition: text-underline-offset 0.25s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-underline-offset: 0.5rem;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
